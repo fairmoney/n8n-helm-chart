@@ -79,12 +79,10 @@ Selector labels
   value: {{ include "n8n.configFiles" . | quote }}
 {{ end }}
 {{- if .Values.scaling.enabled }}
+{{- if .Values.scaling.redis.host }}
 - name: "QUEUE_BULL_REDIS_HOST"
-  {{- if .Values.scaling.redis.host }}
   value: "{{ .Values.scaling.redis.host }}"
-  {{ else }}
-  value: "{{ .Release.Name }}-redis-master"
-  {{ end }}
+{{ end }}
 - name: "EXECUTIONS_MODE"
   value: "queue"
 {{ end }}
