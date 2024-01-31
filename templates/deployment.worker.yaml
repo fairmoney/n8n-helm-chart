@@ -56,6 +56,13 @@ spec:
           args: ["worker", "--concurrency={{ .Values.scaling.worker.concurrency }}"]
           env:
             {{- include "n8n.deploymentPodEnvironments" . | nindent 12 }}
+            {{- range $key, $value := .Values.extraEnvSecrets_worker_deployment }}
+            - name: {{ $key }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ $value.name | quote }}
+                  key: {{ $value.key | quote }}
+            {{ end }}
           ports:
             - name: http
               containerPort: {{ get .Values.config "port" | default 5678 }}

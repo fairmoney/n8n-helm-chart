@@ -9,7 +9,7 @@ entries:
         https://github.com/8gears/n8n-helm-chart/pull/63\n"
     apiVersion: v2
     appVersion: 1.22.3
-    created: "2024-01-17T14:05:51.94998+02:00"
+    created: "2024-01-31T10:25:10.156496+02:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -18,7 +18,7 @@ entries:
     description: A Kubernetes Helm chart for n8n a free and open fair-code licensed
       node based Workflow Automation Tool. Easily automate tasks across different
       services.
-    digest: 8a55907d3c907a690b36db0f1d4c9bc5c649daeb6315ea745afc83d7dd6e3ac2
+    digest: d18e55798f1fca45b3f0bffea67672e51c0fac7f7876ff24a7a5862b13263ff6
     home: https://github.com/8gears/n8n-helm-chart
     icon: https://avatars1.githubusercontent.com/u/45487711?s=200&v=4
     keywords:
@@ -38,4 +38,37 @@ entries:
     urls:
     - https://fairmoney.github.io/n8n-helm-chart/n8n-0.20.1.tgz
     version: 0.20.1
-generated: "2024-01-17T14:05:51.944771+02:00"
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 7.0.5
+    created: "2024-01-31T10:25:10.161183+02:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: aafec5258f566caddd524e44c4a97eccebe70fdc548ce7f298bc79bafd243a3f
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/redis
+    urls:
+    - https://fairmoney.github.io/n8n-helm-chart/charts/redis-17.2.0.tgz
+    version: 17.2.0
+generated: "2024-01-31T10:25:10.151342+02:00"
