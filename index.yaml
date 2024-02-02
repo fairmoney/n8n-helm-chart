@@ -9,7 +9,7 @@ entries:
         https://github.com/8gears/n8n-helm-chart/pull/63\n"
     apiVersion: v2
     appVersion: 1.22.3
-    created: "2024-01-31T10:25:10.156496+02:00"
+    created: "2024-02-02T09:31:32.533501+02:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -18,7 +18,7 @@ entries:
     description: A Kubernetes Helm chart for n8n a free and open fair-code licensed
       node based Workflow Automation Tool. Easily automate tasks across different
       services.
-    digest: d18e55798f1fca45b3f0bffea67672e51c0fac7f7876ff24a7a5862b13263ff6
+    digest: c68e8504f800e18f9e8de96cd115eda38d4bd529966b89dd8db43601333bd8b5
     home: https://github.com/8gears/n8n-helm-chart
     icon: https://avatars1.githubusercontent.com/u/45487711?s=200&v=4
     keywords:
@@ -43,7 +43,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 7.0.5
-    created: "2024-01-31T10:25:10.161183+02:00"
+    created: "2024-02-02T09:31:32.537033+02:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -71,4 +71,4 @@ entries:
     urls:
     - https://fairmoney.github.io/n8n-helm-chart/charts/redis-17.2.0.tgz
     version: 17.2.0
-generated: "2024-01-31T10:25:10.151342+02:00"
+generated: "2024-02-02T09:31:32.528173+02:00"
